@@ -24,9 +24,9 @@ def get_weather():
     title=weather_data["name"],
     status=weather_data["weather"][0]["description"].capitalize(),
     temp=f"{weather_data['main']['temp']:.1f}",
-    ftemp=f"{(weather_data['main']['temp'])*(9/5)+32:.1f}",
+    ftemp=f"{((weather_data['main']['temp'])-(32))*5/9:.1f}",
     feels_like=f"{weather_data['main']['feels_like']:.1f}",
-    ffeels_like=f"{(weather_data['main']['feels_like'])*(9/5)+32:.1f}"
+    ffeels_like=f"{((weather_data['main']['feels_like'])-32)*(5/9):.1f}"
   )
 
 
